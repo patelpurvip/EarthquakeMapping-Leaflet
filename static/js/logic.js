@@ -129,6 +129,8 @@ L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 // ADD LEGEND
 var legend = L.control({ position: "bottomright" });
 
+
+
 legend.onAdd = function() {
   var div = L.DomUtil.create('div', 'legend');
   var colors = geojson.options.colors;
@@ -136,13 +138,19 @@ legend.onAdd = function() {
   labels = ['<strong>Earthquake magnitude (Richter scale)</strong>'],
   categories = ["> 5.5","5.5 to 5"," 5 to 4.5","< 4.5"];
 
-  var legendInfo = "<h1>Median Income</h1>" +
-      "<div class=\"labels\">" +
-        "<div class=\"min\">" + limits[0] + "</div>" +
-        "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-      "</div>";
+  var legendInfo = "<h4>Earthquake<br>Magnitude</h4>" 
+  
+  // +
+  //     "<div class=\"labels\">" +
+  //       "<div class=\"min\">" + limits[0] + "</div>" +
+  //       "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+  //     "</div>";
     
   div.innerHTML = legendInfo;
+
+  // limits.forEach(function(limit, index) {
+  //   labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+  // });
   
   return div;
 }
