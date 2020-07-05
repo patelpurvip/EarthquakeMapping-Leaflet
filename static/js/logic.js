@@ -115,27 +115,24 @@ L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 // ADD LEGEND
 var legend = L.control({ position: "bottomright" });
 
-legend.onAdd = function() {
+legend.onAdd = function(myMap) {
   var div = L.DomUtil.create('div', 'info legend');
+  var mag = [4.5,5,5.5,6];
+
   var colors = [
     "#ffffb2",
     "#fca420",
     "#d84f19",
     "#b10026"
   ];
-  var mag = [4.5,5,5.5,6];
+
+  div.innerHTML = "<h4>Earthquake Magnitude</h4>";
   
   for (var i = 0; i < mag.length; i++) {
     div.innerHTML += 
-    "<i style='background: "+colors[i]+"'></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
+      "<i style='background: "+colors[i]+"'></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
   }
-  
-  // labels = ['<strong>Earthquake magnitude (Richter scale)</strong>'],
-  // legendInfo = "<h4>Earthquake<br>Magnitude</h4>" 
-  // div.innerHTML = legendInfo;
-  // limits.forEach(function(limit, index) {
-  //   labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
-  // });
+
   return div;
 }
 

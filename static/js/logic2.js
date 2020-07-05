@@ -75,18 +75,10 @@ d3.json(queryUrl, function(data) {
   function colorMarkers(feature) {
     // console.log(feature.properties.mag)
     var color = "";
-    if (feature.properties.mag > 6) {
-        color = "#b10026";
-    }
-    else if (feature.properties.mag >= 5.5) {
-        color = "#d84f19";
-    }
-    else if (feature.properties.mag >= 5) {
-        color = "#fca420";
-    }
-    else {
-        color = "#ffffb2";
-    }
+    if (feature.properties.mag > 6) {color = "#b10026";}
+    else if (feature.properties.mag >= 5.5) {color = "#d84f19";}
+    else if (feature.properties.mag >= 5) {color = "#fca420";}
+    else {color = "#ffffb2";}
 
     var style = {
       color: "black",
