@@ -31,6 +31,7 @@ var baseMaps = {
     "Dark Map": darkmap
   };
 
+//---------------------------------------------------------
 
 // CREATE OVERLAY LAYERS
 // 1) Tectonic plate boundary layer
@@ -44,22 +45,6 @@ d3.json(platesUrl, function (plates) {
   }).addTo(platesLayer);
 });
 
-// d3.json(platesUrl, function (plates) {
-//   createPlates(plates);
-// });
-
-// function createPlates (platesData) {
-//   var boundaries = L.geoJSON(platesData, {
-//     color: 'black',
-//     weight: 1,
-//     fillOpacity: 0.01
-//   }).addTo(platesLayer);
-
-//   platesLayer.addTo(myMap);
-
-//   return boundaries
-// }
-//---------------------------------------------------------
 //---------------------------------------------------------
 
 // 2) Earthquakes layer
@@ -113,6 +98,7 @@ var overlayMaps = {
   "Tectonic Plates": platesLayer
   };
 
+//---------------------------------------------------------
 
 //CREATE MY MAP
 var myMap = L.map("map", {
@@ -129,29 +115,27 @@ L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 // ADD LEGEND
 var legend = L.control({ position: "bottomright" });
 
-
-
 legend.onAdd = function() {
-  var div = L.DomUtil.create('div', 'legend');
-  var colors = geojson.options.colors;
-  var limits = geojson.options.limits;
-  labels = ['<strong>Earthquake magnitude (Richter scale)</strong>'],
-  categories = ["> 5.5","5.5 to 5"," 5 to 4.5","< 4.5"];
-
-  var legendInfo = "<h4>Earthquake<br>Magnitude</h4>" 
+  var div = L.DomUtil.create('div', 'info legend');
+  var colors = [
+    "#ffffb2",
+    "#fca420",
+    "#d84f19",
+    "#b10026"
+  ];
+  var mag = [4.5,5,5.5,6];
   
-  // +
-  //     "<div class=\"labels\">" +
-  //       "<div class=\"min\">" + limits[0] + "</div>" +
-  //       "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-  //     "</div>";
-    
-  div.innerHTML = legendInfo;
-
+  for (var i = 0; i < mag.length; i++) {
+    div.innerHTML += 
+    "<i style='background: "+colors[i]+"'></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
+  }
+  
+  // labels = ['<strong>Earthquake magnitude (Richter scale)</strong>'],
+  // legendInfo = "<h4>Earthquake<br>Magnitude</h4>" 
+  // div.innerHTML = legendInfo;
   // limits.forEach(function(limit, index) {
   //   labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
   // });
-  
   return div;
 }
 
