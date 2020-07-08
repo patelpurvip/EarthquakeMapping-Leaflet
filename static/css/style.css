@@ -8,3 +8,24 @@ body,
 html {
   height: 100%;
 }
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.legend {
+  background-color: black;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.legend-title {
+  color: #ffffff
+}

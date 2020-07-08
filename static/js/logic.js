@@ -116,7 +116,7 @@ L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 var legend = L.control({ position: "bottomright" });
 
 legend.onAdd = function(myMap) {
-  var div = L.DomUtil.create('div', 'info legend');
+  var div = L.DomUtil.create('div', 'legend');
   var mag = [4.5,5,5.5,6];
 
   var colors = [
@@ -126,11 +126,11 @@ legend.onAdd = function(myMap) {
     "#b10026"
   ];
 
-  div.innerHTML = "<h4>Earthquake Magnitude</h4>";
+  div.innerHTML = "<h4 class=\"legend-title\">Earthquake Magnitude</h4>";
   
   for (var i = 0; i < mag.length; i++) {
     div.innerHTML += 
-      "<i style='background: "+colors[i]+"'></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
+      "<i class=\"dot\" style=\"background-color: "+colors[i]+";\"></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
   }
 
   return div;
