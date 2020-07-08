@@ -126,11 +126,11 @@ legend.onAdd = function(myMap) {
     "#b10026"
   ];
 
-  div.innerHTML = "<h4 class=\"legend-title\">Earthquake Magnitude</h4>";
+  div.innerHTML = "<h3 class=\"legend-title\">Earthquake<br>Magnitude</h3>";
   
   for (var i = 0; i < mag.length; i++) {
     div.innerHTML += 
-      "<i class=\"dot\" style=\"background-color: "+colors[i]+";\"></i>"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"<br>":"+");
+      "<i class=\"dot\" style=\"background-color: "+colors[i]+";\"></i><strong class=\"legend-text\">"+mag[i]+(mag[i+1] ? "&ndash;"+mag[i+1]+"</strong><br>":"+");
   }
 
   return div;
