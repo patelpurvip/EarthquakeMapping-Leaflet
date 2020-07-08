@@ -109,9 +109,7 @@ var myMap = L.map("map", {
 
 
 //ADD CONTROL
-L.control.layers(baseMaps, overlayMaps, 
-  // {collapsed:false}
-  ).addTo(myMap);
+L.control.layers(baseMaps, overlayMaps, {collapsed:false}).addTo(myMap);
 
 
 // ADD LEGEND
