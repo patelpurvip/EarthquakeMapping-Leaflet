@@ -1,7 +1,4 @@
 config.js
 .env
-leaf-app.py
-Procfile
-/templates
 /earthquakes
-requirements.txt
+earthquakes/
