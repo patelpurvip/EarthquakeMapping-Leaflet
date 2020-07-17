@@ -1,6 +1,6 @@
 # Mapping Recent Earthquakes: JS-Leaflet
 
-![Map Demo](map_demo.gif)
+![Map Demo](map_demonstration.gif)
 
 This exercise makes use of data collected and published by the United States Geological Survey (USGS), the US federal agency responsible for providing scientific data about natural hazards, the health of ecosystems and the environment, and the impacts of climate and land-use change. USGA scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes.
 
