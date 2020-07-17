@@ -38,7 +38,7 @@ A control panel in the upper righthand corner allows users to change the base la
 
 ## Local Installation
 1. Download the file to a local folder
-2. Insert your Mapbox API keys into the config file
+2. Insert your personal Mapbox API keys into the guest_config.js file
 3. Run a local server from that folder (i.e. open a command terminal from that folder, type in 'python -m http.server' into your terminal, and hit enter).
 4. Open your local host terminal in any web browser (most likely http://localhost:8000/)
 5. Do not forget to close your browser tab and stop the local server (type Ctrl C in your command terminal) when you are done.
