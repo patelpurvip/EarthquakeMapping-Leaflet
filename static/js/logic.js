@@ -104,12 +104,14 @@ var overlayMaps = {
 var myMap = L.map("map", {
   center: [35.095192, 33.203430],
   zoom: 4,
-  layers: [darkmap, earthquakesLayer, platesLayer]
+  layers: [streetmap, earthquakesLayer]
 });
 
 
 //ADD CONTROL
-L.control.layers(baseMaps, overlayMaps, {collapsed:false}).addTo(myMap);
+L.control.layers(baseMaps, overlayMaps, 
+  // {collapsed:false}
+  ).addTo(myMap);
 
 
 // ADD LEGEND

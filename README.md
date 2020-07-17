@@ -1,1 +1,3 @@
-# JS-Leaflet-challenge
+# Mapping Recent Earthquakes: JS-Leaflet
+
+![Map Demo](map_demo.gif)
