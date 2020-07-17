@@ -8,7 +8,7 @@ The purpose of this project was to visualize data on the most recent earthquakes
 
 
 ## Dataset Information
-The USGS provides earthquake data in a number of different formats, updated every 5 minutes, and made available via the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).  Each dataset link available provides a JSON representation of that data, where the JSON url can be used to pull in the data to javascript for visualization. 
+The USGS provides earthquake data in a number of different formats, updated every 5 minutes, and made available via the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).  Each dataset link available provides a JSON representation of that data, where the URL for JSON data can be used to pull in the data to JavaScript for visualization. 
 
 
 ## Visualization
@@ -24,11 +24,11 @@ Base layers for the map were called through the Mapbox.com API.
 
 
 ## Map Layers
-A control panel in the upper righthand corner allows users to change the tile layers and overlay layers for the map.
+A control panel in the upper righthand corner allows users to change the base layers and overlay layers for the map.
 
 1. Base layer options:
     * Street map
-    * Satillite map
+    * Satellite map
     * Dark Map (to allow the markers to pop more clearly)
 
 2. Overlay layer options
@@ -47,5 +47,5 @@ A control panel in the upper righthand corner allows users to change the tile la
 ## Copyright
 1. Earthquake data and respective JSONs are available through the [USGS](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
 2. Data on tectonic plates can be found at the GitHub repository of [Hugo Ahlenius](https://github.com/fraxen/tectonicplates)
-3. Map baselayers are drawn from [Mapbox}(https://www.mapbox.com/)
+3. Map base layers are drawn from [Mapbox}(https://www.mapbox.com/)
 
