@@ -104,7 +104,7 @@ var overlayMaps = {
 var myMap = L.map("map", {
   center: [35.095192, 33.203430],
   zoom: 4,
-  layers: [streetmap, earthquakesLayer]
+  layers: [streetmap, earthquakesLayer, platesLayer]
 });
 
 
