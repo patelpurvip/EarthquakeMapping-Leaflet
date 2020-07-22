@@ -6,6 +6,8 @@ This exercise makes use of data collected and published by the United States Geo
 
 The purpose of this project was to visualize data on the most recent earthquakes worldwide, calling data from the USGS's website that is collected and updated daily. These types of visualizations allow us to better educate the public and other organizations in real-time, making quick use of data collected by large public agencies.
 
+### See the interactive map [here](https://patelpurvip.github.io/EarthquakeMapping-Leaflet/).
+
 
 ## Dataset Information
 The USGS provides earthquake data in a number of different formats, updated every 5 minutes, and made available via the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).  Each dataset link available provides a JSON representation of that data, where the URL for JSON data can be used to pull in the data to JavaScript for visualization. 
